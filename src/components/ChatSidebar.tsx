@@ -1,7 +1,8 @@
 
 import React from 'react';
-import { MessageSquare, Users } from 'lucide-react';
+import { MessageSquare, Users, Plus, UserPlus } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { Button } from './ui/button';
 
 interface ChatItemProps {
   title: string;
@@ -38,7 +39,25 @@ const ChatSidebar: React.FC = () => {
   return (
     <div className="w-80 h-full bg-zinc-900 flex flex-col border-r border-zinc-800">
       <div className="p-4 border-b border-zinc-800">
-        <h1 className="text-xl font-bold text-white">Chat</h1>
+        <h1 className="text-xl font-bold text-white mb-3">Chat</h1>
+        <div className="flex space-x-2">
+          <Button 
+            variant="outline" 
+            size="sm" 
+            className="flex-1 bg-zinc-800 border-zinc-700 hover:bg-zinc-700 text-white"
+          >
+            <Plus className="h-4 w-4 mr-2" />
+            New Chat
+          </Button>
+          <Button 
+            variant="outline" 
+            size="sm" 
+            className="flex-1 bg-zinc-800 border-zinc-700 hover:bg-zinc-700 text-white"
+          >
+            <UserPlus className="h-4 w-4 mr-2" />
+            New Group
+          </Button>
+        </div>
       </div>
       
       <div className="p-2">
