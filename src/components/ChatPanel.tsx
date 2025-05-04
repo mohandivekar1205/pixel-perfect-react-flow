@@ -13,12 +13,14 @@ const ChatPanel: React.FC = () => {
         <div className="text-center text-zinc-500 text-xs py-2">17 June 2021 20:36</div>
         
         <ChatMessage
+          content=""
           isSystem={true}
           systemUser="Mohan Divekar"
           systemAction="joined the conversation"
         />
         
         <ChatMessage
+          content=""
           isSystem={true}
           systemUser="Mohan Divekar"
           systemAction="named the meeting Meeting with Mohan Divekar"
