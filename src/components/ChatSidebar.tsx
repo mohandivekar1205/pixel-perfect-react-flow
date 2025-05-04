@@ -57,8 +57,8 @@ const ChatSidebar: React.FC = () => {
         </div>
       </div>
       
-      <div className="mt-auto border-t border-zinc-800">
-        <button className="flex items-center justify-center w-full py-3 text-sm font-medium text-white">
+      <div className="mt-auto border-t border-zinc-800 p-3">
+        <button className="flex items-center justify-center w-full py-2 px-4 text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 rounded-full transition-colors">
           <Users className="h-5 w-5 mr-2" />
           Invite to Teams
         </button>
