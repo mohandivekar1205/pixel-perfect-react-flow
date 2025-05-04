@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Smile, Send } from 'lucide-react';
+import { Smile, Send, PaperclipIcon, Image, Mic } from 'lucide-react';
 
 const ChatInput: React.FC = () => {
   return (
@@ -12,6 +12,12 @@ const ChatInput: React.FC = () => {
           className="flex-1 bg-transparent text-white outline-none text-sm"
         />
         <div className="flex items-center space-x-2 text-zinc-400">
+          <button className="p-1 rounded-full hover:bg-zinc-700 hover:text-white">
+            <Image className="h-5 w-5" />
+          </button>
+          <button className="p-1 rounded-full hover:bg-zinc-700 hover:text-white">
+            <Mic className="h-5 w-5" />
+          </button>
           <button className="p-1 rounded-full hover:bg-zinc-700 hover:text-white">
             <Smile className="h-5 w-5" />
           </button>
