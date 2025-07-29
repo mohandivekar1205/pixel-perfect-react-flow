@@ -3,8 +3,6 @@ import ChatHeader from './ChatHeader';
 import ChatMessage from './ChatMessage';
 import ChatInput from './ChatInput';
 
-
-
 interface ChatPanelProps {
   user: {
     id: number;
@@ -17,7 +15,7 @@ interface ChatPanelProps {
 const ChatPanel: React.FC<ChatPanelProps> = ({ user, onSendMessage }) => {
   const [message, setMessage] = useState('');
    
-  console.log(user);
+  
 
   if (!user) return <div>Select a user to chat</div>;
 
