@@ -11,6 +11,12 @@ interface Props {
   onUserSelect: (user: User) => void;
 }
 
+const mockUsers: User[] = [
+  { id: 1, name: 'Mohan Divekar', username: 'Mohan Divekar' },
+  { id: 2, name: 'Saket Divekar', username: 'Saket Divekar' },
+  { id: 3, name: 'Alice Johnson', username: 'Alice Johnson' },
+];
+
 const SearchBox: React.FC<Props> = ({ onUserSelect }) => {
   const [query, setQuery] = useState('');
   const [filteredUsers, setFilteredUsers] = useState<User[]>([]);
@@ -29,8 +35,8 @@ const SearchBox: React.FC<Props> = ({ onUserSelect }) => {
       console.log(value)
       const response = await searchUser(value);
       // Adjust according to your API response structure
-      setFilteredUsers(response.data || []);
-      
+      //setFilteredUsers(response.data || []);
+      setFilteredUsers(mockUsers.filter(u => u.username.toLowerCase().includes(value.toLowerCase())))
     } catch (error) {
       setFilteredUsers([]);
     }
@@ -50,12 +56,12 @@ const SearchBox: React.FC<Props> = ({ onUserSelect }) => {
       </div>
 
       {/* Title and List */}
-      {filteredUsers.length > 0 && (
+      {mockUsers.length > 0 && (
         <div className="absolute left-0 right-0 mt-1 bg-zinc-800 border border-zinc-700 rounded shadow-lg max-h-48 overflow-y-auto">
           {/* Title for the list */}
-          <div className="px-4 py-2 text-sm font-bold text-white border-b border-zinc-700">
+          {/* <div className="px-4 py-2 text-sm font-bold text-white border-b border-zinc-700">
             Name
-          </div>
+          </div> */}
           {filteredUsers.map((user: any, index: number) => (
             <div
               key={user.id || index}
