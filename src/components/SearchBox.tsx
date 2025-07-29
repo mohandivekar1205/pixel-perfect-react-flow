@@ -33,7 +33,7 @@ const SearchBox: React.FC<Props> = ({ onUserSelect }) => {
 
     try {
       console.log(value)
-      const response = await searchUser(value);
+      // const response = await searchUser(value);
       // Adjust according to your API response structure
       //setFilteredUsers(response.data || []);
       setFilteredUsers(mockUsers.filter(u => u.username.toLowerCase().includes(value.toLowerCase())))
