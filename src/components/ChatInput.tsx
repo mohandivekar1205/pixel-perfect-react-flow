@@ -4,7 +4,7 @@ import { Smile, Send, PaperclipIcon, Image, Mic } from 'lucide-react';
 
 const ChatInput: React.FC = () => {
   return (
-    <div className="bg-zinc-900 border-t border-zinc-800 p-4">
+    <div className=" border-none p-4">
       <div className="flex items-center bg-zinc-800 rounded-md px-3 py-2 max-w-[85%] mx-auto">
         <input
           type="text"
@@ -22,7 +22,7 @@ const ChatInput: React.FC = () => {
             <Smile className="h-5 w-5" />
           </button>
           <button className="p-1 rounded-full hover:bg-zinc-700 hover:text-white">
-            <Send className="h-5 w-5" />
+            <Send className="h-5 w-5 rotate-45" />
           </button>
         </div>
       </div>

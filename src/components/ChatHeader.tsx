@@ -13,13 +13,13 @@ const ChatHeader: React.FC<ChatHeaderProps> = ({ title }) => {
         <h2 className="text-lg font-semibold text-white">{title}</h2>
       </div>
       
-      <div className="flex items-center space-x-2">
+      {/* <div className="flex items-center space-x-2">
         <div className="px-4 py-1 text-sm text-white border-b-2 border-white">Chat</div>
         <div className="px-4 py-1 text-sm text-zinc-400">Files</div>
         <div className="px-4 py-1 text-sm text-zinc-400">Photos</div>
-      </div>
+      </div> */}
       
-      <div className="flex items-center space-x-2">
+      {/* <div className="flex items-center space-x-2">
         <button className="px-3 py-1 text-white bg-indigo-600 rounded-md hover:bg-indigo-700">
           Join
         </button>
@@ -30,7 +30,7 @@ const ChatHeader: React.FC<ChatHeaderProps> = ({ title }) => {
         <button className="text-zinc-400 hover:text-white">
           <MoreHorizontal className="h-5 w-5" />
         </button>
-      </div>
+      </div> */}
     </div>
   );
 };

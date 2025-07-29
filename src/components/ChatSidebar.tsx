@@ -1,7 +1,7 @@
-
 import React from 'react';
 import { MessageSquare, Users } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import UserService from '@/api/userServiceApi'; // Import UserService API
 
 interface ChatItemProps {
   title: string;
@@ -37,7 +37,7 @@ const ChatItem: React.FC<ChatItemProps> = ({ title, date, preview, isActive, onC
 const ChatSidebar: React.FC = () => {
   return (
     <div className="w-80 h-full bg-zinc-900 flex flex-col border-r border-zinc-800">
-      <div className="p-4 border-b border-zinc-800">
+      <div className="p-3.5 border-b border-zinc-800">
         <h1 className="text-xl font-bold text-white">Chat</h1>
       </div>
       
@@ -49,7 +49,7 @@ const ChatSidebar: React.FC = () => {
         
         <div className="mt-2 space-y-1">
           <ChatItem
-            title="Meeting with Mohan Divekar"
+            title="Mohan Divekar"
             date="17-06-2021"
             preview="You: Your meeting is created. Meeting link: https://teams.live.com/meet/9567..."
             isActive={true}
@@ -57,12 +57,12 @@ const ChatSidebar: React.FC = () => {
         </div>
       </div>
       
-      <div className="mt-auto border-t border-zinc-800 p-3">
+      {/* <div className="mt-auto border-t border-zinc-800 p-3">
         <button className="flex items-center justify-center w-full py-2 px-4 text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 rounded-full transition-colors">
           <Users className="h-5 w-5 mr-2" />
           Invite to Teams
         </button>
-      </div>
+      </div> */}
     </div>
   );
 };
